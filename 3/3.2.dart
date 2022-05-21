@@ -1,3 +1,5 @@
+//3.2〜3.3
+
 //後ほど説明 (*1)
 enum Currency { yen, dollar }
 
