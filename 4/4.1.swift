@@ -16,7 +16,7 @@ class Member {
     }
 }
 
-class Enemey {
+class Enemy {
     let power: Int
     let weaponAttack: Int
     let speed: Int

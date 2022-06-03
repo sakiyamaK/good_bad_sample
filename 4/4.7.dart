@@ -24,6 +24,8 @@ class Weapon {
 }
 
 void main() {
+  // [BAD]
+  // クラスのインスタンスをパラメータとして渡して使い回している
   final attackPower = AttackPower(20);
   final weaponA = Weapon(attackPower);
   final weaponB = Weapon(attackPower);

@@ -28,14 +28,11 @@ void main() {
   final attackPowerB = AttackPower(20);
   final weaponB = Weapon(attackPowerB);
 
-  //仕様追加で武器Bのパワーが変わった
+  //仕様追加でweaponBのパワーが変わった
   weaponB.attackPower.value = 25;
 
   // [GOOD]
   // 仕様追加があったweaponBだけパワーが変わった
-  // [おまけ]
-  // classは参照渡しという概念であるためweaponAとBの両方のパワーが変わった
-  // 当日話します
   print("weapon a attack power : ${weaponA.attackPower.value}");
   print("weapon b attack power : ${weaponB.attackPower.value}");
 }
