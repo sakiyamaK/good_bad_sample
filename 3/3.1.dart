@@ -1,12 +1,12 @@
 //後ほど説明 (*1)
-enum Currentry { yen, dollar }
+enum Currency { yen, dollar }
 
 //[BAD]
 //そもそもビルドができないようにされている
 //パラメータを初期化しないといけない
 class Money {
   int amount;
-  Currentry currentry;
+  Currency currency;
 }
 
 void main() {

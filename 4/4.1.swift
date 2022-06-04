@@ -34,7 +34,7 @@ class Enemy {
 // [おまけ]
 // 実はSwiftの場合Classを使うよりStructを中心に使う方が良い
 // UIKitのViewControllerなどはObjC互換のためclass中心で設計されているが
-// 後のSwiftはstruct中心で設計されている
+// 後のSwiftUIはStruct中心で設計されている
 // classとstructの違いは話が逸れるためここでは詳し説明しない
 struct MemberStuct {
     let power: Double
