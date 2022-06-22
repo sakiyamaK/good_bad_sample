@@ -1,14 +1,15 @@
 //4.7~4.8
 
 class AttackPower {
-  static final MIN = 0;
+  static final _MIN = 0;
   // [BAD]
   // 定数になっていないのであとからどう変わるか分からない
   late int value;
+
   AttackPower(int value) {
     // [GOOD]
     // guard節で不正な値が代入されないようにしている
-    if (value < MIN) {
+    if (value < _MIN) {
       throw Exception();
     }
     this.value = value;
@@ -40,5 +41,4 @@ void main() {
   // 当日話します
   print("weapon a attack power : ${weaponA.attackPower.value}");
   print("weapon b attack power : ${weaponB.attackPower.value}");
-
 }

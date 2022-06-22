@@ -7,7 +7,7 @@ class AttackPower {
     init(value: Int) throws {
         // [GOOD]
         // guard節で不正な値が代入されないようにしている
-        guard value > AttackPower.MIN else {
+        guard value >= AttackPower.MIN else {
             throw fatalError()
         }
         self.value = value

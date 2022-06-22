@@ -15,7 +15,7 @@ struct AttackPower {
     init(value: Int) throws {
         // [GOOD]
         // guard節で不正な値が代入されないようにしている
-        guard value > AttackPower.MIN else {
+        guard value >= AttackPower.MIN else {
             throw fatalError()
         }
         self.value = value
@@ -23,13 +23,19 @@ struct AttackPower {
 }
 
 struct Weapon {
-    //あとで値を変えるからわざとvar
+    // あとで値を変えるからわざとvar
+    // [BAD] 本来はあとで値を変えること自体がダメだが今は例を示すため
     var attackPower: AttackPower
 }
 
 let attackPower = try! AttackPower(value: 20)
+
+// [GOOD]
+// structは値渡しのためメソッドに渡すとコピーされる
+
+let weaponA = Weapon(attackPower: attackPower)
 //あとで値を変えるからわざとvar
-var weaponA = Weapon(attackPower: attackPower)
+// [BAD] 本来はあとで値を変えること自体がダメだが今は例を示すため
 var weaponB = Weapon(attackPower: attackPower)
 
 weaponB.attackPower.value = 25
