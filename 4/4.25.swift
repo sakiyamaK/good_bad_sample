@@ -3,7 +3,7 @@
 import Foundation
 
 class HitPoint {
-    static private let min = 0;
+    static private let min = 0
 
     // 可変であることが前提なのでletじゃないことはBADではない
     // [BAD]
@@ -80,8 +80,8 @@ print(member.states)
 
 // 本の対応だけではまだバグが入り込む余地があるぐらい
 // 変数の利用は気をつけないといけない
-member.hitPoint.amount = -20;
+member.hitPoint.amount = -20
 member.states.append(.alive)
-print(member.hitPoint.amount);
-print(member.states);
+print(member.hitPoint.amount)
+print(member.states)
 

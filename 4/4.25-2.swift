@@ -4,7 +4,7 @@
 import Foundation
 
 class HitPoint {
-    static private let min = 0;
+    static private let min = 0
 
     // 可変であることが前提なのでletじゃないことはBADではない
     // [GOOD]
@@ -40,7 +40,7 @@ class Member {
     // あとから状態を変えるのであればvarとなる
     // [GOOD]
     // setterだけprivateにして外部からgetだけできるようにする
-    private(set)var states: [State]
+    private(set) var states: [State]
     
     init(hitPoint: HitPoint, states: [State]) {
         self.hitPoint = hitPoint

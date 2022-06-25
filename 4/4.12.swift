@@ -19,13 +19,13 @@ class AttackPower {
     // 結局valueが今いくつなのか、上限はどこまでなのか分からない
     // もっというとicrementがマイナスだとvalueはMIN以下になるバグがある
     func reinForce(increment: Int) {
-        value += increment;
+        value += increment
     }
     
     // [BAD]
     // インスタンスの状態を変える処理があちこちにある
     func disable() {
-        value = AttackPower.MIN;
+        value = AttackPower.MIN
     }
 }
 
@@ -57,4 +57,4 @@ attackPower.reinForce(increment: 10)
 
   // [BAD]
   // weapon.attackPower.valueが結局いくつなのか実行時にしか分からない
-print("weapon attack power : \(weapon.attackPower.value)");
+print("weapon attack power : \(weapon.attackPower.value)")

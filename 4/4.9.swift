@@ -33,7 +33,7 @@ let weaponA = Weapon(attackPower: attackPower)
 let weaponB = Weapon(attackPower: attackPower)
 
 //仕様追加でweaponBのパワーが変わった
-weaponB.attackPower.value = 25;
+weaponB.attackPower.value = 25
 
 // [BAD]
 // 仕様追加があったのはweaponBのパワーだけなのに
@@ -41,7 +41,7 @@ weaponB.attackPower.value = 25;
 // [おまけ]
 // classは参照渡しという概念であるためweaponAとBの両方のパワーが変わった
 // 当日話します
-print("weapon a attack power : \(weaponA.attackPower.value)");
-print("weapon b attack power : \(weaponB.attackPower.value)");
+print("weapon a attack power : \(weaponA.attackPower.value)")
+print("weapon b attack power : \(weaponB.attackPower.value)")
 
 

@@ -42,5 +42,5 @@ weaponB.attackPower.value = 25
 
 // [GOOD]
 // 仕様追加があったweaponBだけパワーが変わった
-print("weapon a attack power : \(weaponA.attackPower.value)");
-print("weapon b attack power : \(weaponB.attackPower.value)");
+print("weapon a attack power : \(weaponA.attackPower.value)")
+print("weapon b attack power : \(weaponB.attackPower.value)")
