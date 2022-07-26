@@ -3,7 +3,7 @@
 import Foundation
 
 class HitPoint {
-    static private let min = 0
+    private static let min = 0
 
     // 可変であることが前提なのでletじゃないことはBADではない
     // [BAD]
@@ -13,17 +13,17 @@ class HitPoint {
         // [GOOD]
         // amountに_MINより小さい値が入らないようにしている
         guard amount >= HitPoint.min else {
-          throw fatalError()
+            throw fatalError()
         }
 
         self.amount = amount
     }
-    
+
     func damege(damegeAmount: Int) {
-      let nextAmount = amount - damegeAmount
-      // [GOOD]
-      // amountに_MINより小さい値が入らないようにしている
-      amount = max(HitPoint.min, nextAmount)
+        let nextAmount = amount - damegeAmount
+        // [GOOD]
+        // amountに_MINより小さい値が入らないようにしている
+        amount = max(HitPoint.min, nextAmount)
     }
 
     // [GOOD]
@@ -31,14 +31,13 @@ class HitPoint {
     // しかし内部は_MINとの比較であり,_MINは仕様変更でどう値が変わるか分からない
     // パラメータがないためメソッドにする必要もない
     var isMin: Bool {
-      self.amount == HitPoint.min
+        amount == HitPoint.min
     }
 }
 
 enum State {
     case alive, death, poison
 }
-
 
 class Member {
     let hitPoint: HitPoint
@@ -47,12 +46,12 @@ class Member {
     // [BAD]
     // 外部から変更できてしまう
     var states: [State]
-    
+
     init(hitPoint: HitPoint, states: [State]) {
         self.hitPoint = hitPoint
         self.states = states
     }
-    
+
     func damege(damegeAmount: Int) {
         hitPoint.damege(damegeAmount: damegeAmount)
         if hitPoint.isMin {
@@ -84,4 +83,3 @@ member.hitPoint.amount = -20
 member.states.append(.alive)
 print(member.hitPoint.amount)
 print(member.states)
-

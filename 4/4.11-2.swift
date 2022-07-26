@@ -1,8 +1,7 @@
-//そもそもswiftはclass(参照型)によって発生するバグを避けるために
-//struct(値型)中心に移行している
+// そもそもswiftはclass(参照型)によって発生するバグを避けるために
+// struct(値型)中心に移行している
 // UIKitはclassメイン
 // SwiftUIはstructメイン
-
 
 // [おまけ]
 // [GOOD]
@@ -11,7 +10,7 @@
 struct AttackPower {
     static let MIN = 0
     var value: Int
-    
+
     init(value: Int) throws {
         // [GOOD]
         // guard節で不正な値が代入されないようにしている
@@ -19,7 +18,7 @@ struct AttackPower {
             throw fatalError()
         }
         self.value = value
-  }
+    }
 }
 
 struct Weapon {
@@ -34,7 +33,7 @@ let attackPower = try! AttackPower(value: 20)
 // structは値渡しのためメソッドに渡すとコピーされる
 
 let weaponA = Weapon(attackPower: attackPower)
-//あとで値を変えるからわざとvar
+// あとで値を変えるからわざとvar
 // [BAD] 本来はあとで値を変えること自体がダメだが今は例を示すため
 var weaponB = Weapon(attackPower: attackPower)
 

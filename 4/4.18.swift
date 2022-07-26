@@ -3,7 +3,7 @@ class AttackPower {
     // [GOOD]
     // 定数にしてあとから変わらないようにする
     let value: Int
-    
+
     init(value: Int) throws {
         // [GOOD]
         // guard節で不正な値が代入されないようにしている
@@ -12,7 +12,7 @@ class AttackPower {
         }
         self.value = value
     }
-    
+
     // [GOOD?]
     // GOODとは言い難いが元のインスタンスを変更させてないという点では良い
     func reinForce(increment: Int) -> AttackPower {
@@ -23,9 +23,9 @@ class AttackPower {
 
         // [おまけ]
         // 本当はtry!などせずcatchで処理すべきだが、話が逸れるため使っている
-        return try! AttackPower(value: self.value + increment)
+        return try! AttackPower(value: value + increment)
     }
-    
+
     // [GOOD?]
     // GOODとは言い難いが元のインスタンスを変更させてないという点では良い
     func disable() -> AttackPower {
@@ -37,7 +37,7 @@ class Weapon {
     // [GOOD]
     // 定数パラメータ
     let attackPower: AttackPower
-    
+
     init(attackPower: AttackPower) {
         self.attackPower = attackPower
     }

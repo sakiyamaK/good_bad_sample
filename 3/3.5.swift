@@ -1,4 +1,4 @@
-//3.5~3.6
+// 3.5~3.6
 
 import Foundation
 
@@ -7,21 +7,20 @@ enum Currency {
 }
 
 class Money {
-    
     var amount: Int
     var currency: Currency
-    
+
     init(amount: Int, currency: Currency) {
         guard amount > 0 else {
             self.amount = 0
             self.currency = currency
             return
         }
-        
+
         self.amount = amount
         self.currency = currency
     }
-            
+
     // [GOOD]
     // functionを用意することでMoneyに関する記述はMoenyクラスに集約できる
     func add(other: Int) {
@@ -32,19 +31,19 @@ class Money {
     }
 }
 
-//本来はサーバーから取得してtrue/falseのどっちか実行時に決まる値
+// 本来はサーバーから取得してtrue/falseのどっちか実行時に決まる値
 let specialServiceAdded = true
 let seasonOffApplied = true
 
-//1000円のmoney1を用意
+// 1000円のmoney1を用意
 let money1 = Money(amount: 1000, currency: .yen)
 
 if specialServiceAdded {
-  money1.add(other: -500)
+    money1.add(other: -500)
 }
 
 if seasonOffApplied {
-  money1.add(other: 280)
+    money1.add(other: 280)
 }
 
 // [BAD]

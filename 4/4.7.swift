@@ -1,9 +1,9 @@
 class AttackPower {
-  static let MIN = 0
-  // [BAD]
-  // 定数になっていないのであとからどう変わるか分からない
+    static let MIN = 0
+    // [BAD]
+    // 定数になっていないのであとからどう変わるか分からない
     var value: Int
-    
+
     init(value: Int) throws {
         // [GOOD]
         // guard節で不正な値が代入されないようにしている
@@ -11,7 +11,7 @@ class AttackPower {
             throw fatalError()
         }
         self.value = value
-  }
+    }
 }
 
 class Weapon {
@@ -34,5 +34,3 @@ let weaponB = Weapon(attackPower: attackPower)
 
 print("weapon a attack power : \(weaponA.attackPower.value)")
 print("weapon b attack power : \(weaponB.attackPower.value)")
-
-

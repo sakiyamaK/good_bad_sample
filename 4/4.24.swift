@@ -1,10 +1,10 @@
 // どうしても可変な設計にする場合
 
 class HitPoint {
-  // [BAD]
-  // 可変であることが前提なのでletじゃないことはBADではないが
-  // amountがマイナスもありえたりするなど
-  // 可変なら可変で「正しい値しか」状態を保てないようにしていないことがBAD
+    // [BAD]
+    // 可変であることが前提なのでletじゃないことはBADではないが
+    // amountがマイナスもありえたりするなど
+    // 可変なら可変で「正しい値しか」状態を保てないようにしていないことがBAD
     var amount: Int
     init(amount: Int) {
         self.amount = amount
@@ -14,7 +14,6 @@ class HitPoint {
 enum State {
     case alive, death, poison
 }
-
 
 class Member {
     let hitPoint: HitPoint
@@ -26,8 +25,8 @@ class Member {
     }
 
     func damege(damegeAmount: Int) {
-        hitPoint.amount -= damegeAmount;
-  }
+        hitPoint.amount -= damegeAmount
+    }
 }
 
 let member = Member(hitPoint: HitPoint(amount: 10), states: [State.alive])

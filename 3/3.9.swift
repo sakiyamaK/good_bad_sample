@@ -1,4 +1,4 @@
-//3.9~3.13
+// 3.9~3.13
 
 import Foundation
 
@@ -7,21 +7,20 @@ enum Currency {
 }
 
 class Money {
-
     let amount: Int
     let currency: Currency
-    
+
     init(amount: Int, currency: Currency) {
         guard amount > 0 else {
             self.amount = 0
             self.currency = currency
             return
         }
-        
+
         self.amount = amount
         self.currency = currency
     }
-     
+
     // [GOOD]
     // swiftはデフォルトでメソッドのパラメータはlet扱いになる
     func add(other: Int) -> Money {
@@ -30,21 +29,20 @@ class Money {
         // [補足]
         // ただし新しいインスタンスが生成するコストは発生する
         // 例えばこのクラスが10GBのデータを持ってたりするとコピーされるので時間かかる
-        return Money(amount: self.amount + other, currency: self.currency)
+        return Money(amount: amount + other, currency: currency)
     }
 }
 
-//本来はサーバーから取得してtrue/falseのどっちか実行時に決まる値
+// 本来はサーバーから取得してtrue/falseのどっちか実行時に決まる値
 let specialServiceAdded = true
 let seasonOffApplied = true
 
-//1000円のmoney1を用意
+// 1000円のmoney1を用意
 let money1 = Money(amount: 1000, currency: .yen)
-
 
 // [GOOD]
 // 明確に
-//「元の金額が設定されているmoney1」と
+// 「元の金額が設定されているmoney1」と
 // 「配送料がかかるか判断するためのdeterminedMoney1」を
 // 分けざるを得なくなる <-- ** これが大事
 
@@ -69,4 +67,5 @@ if determinedMoney1.amount < 600 {
 } else {
     print("大丈夫だから処理を続けます")
 }
+
 // -------------------

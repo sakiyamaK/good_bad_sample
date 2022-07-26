@@ -3,7 +3,7 @@ class AttackPower {
     // [BAD]
     // 定数になっていないのであとからどう変わるか分からない
     var value: Int
-    
+
     init(value: Int) throws {
         // [GOOD]
         // guard節で不正な値が代入されないようにしている
@@ -12,7 +12,7 @@ class AttackPower {
         }
         self.value = value
     }
-    
+
     // [BAD]
     // インスタンスの状態を変える処理があちこちにある
     // それらのメソッドが何万行のプロジェクトの中のいたるところで呼ばれていると
@@ -21,7 +21,7 @@ class AttackPower {
     func reinForce(increment: Int) {
         value += increment
     }
-    
+
     // [BAD]
     // インスタンスの状態を変える処理があちこちにある
     func disable() {
@@ -33,7 +33,7 @@ class Weapon {
     // [GOOD]
     // 定数パラメータ
     let attackPower: AttackPower
-    
+
     init(attackPower: AttackPower) {
         self.attackPower = attackPower
     }
@@ -55,6 +55,6 @@ attackPower.disable()
 attackPower.reinForce(increment: 10)
 // ========================================
 
-  // [BAD]
-  // weapon.attackPower.valueが結局いくつなのか実行時にしか分からない
+// [BAD]
+// weapon.attackPower.valueが結局いくつなのか実行時にしか分からない
 print("weapon attack power : \(weapon.attackPower.value)")

@@ -41,13 +41,14 @@ class Member {
   // 外部から変更できてしまう
   // Dartの配列は参照を渡すだけなのでHitPoint.amountのような対応もできない
   // 言語仕様上、注意がいる
-  final List<State> states;
+  final List<State> states; //List.unmodifiable(states);
 
   Member(HitPoint this.hitPoint, List<State> this.states);
 
   void damege(int damegeAmount) {
     hitPoint.damege(damegeAmount);
     if (hitPoint.isMin) {
+      
       states.remove(State.alive);
       states.add(State.death);
       // [おまけ]

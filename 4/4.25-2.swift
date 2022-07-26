@@ -4,35 +4,34 @@
 import Foundation
 
 class HitPoint {
-    static private let min = 0
+    private static let min = 0
 
     // 可変であることが前提なのでletじゃないことはBADではない
     // [GOOD]
     // setterだけprivateにして外部からgetだけできるようにする
     private(set) var amount: Int
-    
+
     init(amount: Int) throws {
         guard amount >= HitPoint.min else {
-          throw fatalError()
+            throw fatalError()
         }
 
         self.amount = amount
     }
-    
+
     func damege(damegeAmount: Int) {
-      let nextAmount = amount - damegeAmount
-      amount = max(HitPoint.min, nextAmount)
+        let nextAmount = amount - damegeAmount
+        amount = max(HitPoint.min, nextAmount)
     }
 
     var isMin: Bool {
-      self.amount == HitPoint.min
+        amount == HitPoint.min
     }
 }
 
 enum State {
     case alive, death, poison
 }
-
 
 class Member {
     let hitPoint: HitPoint
@@ -41,12 +40,12 @@ class Member {
     // [GOOD]
     // setterだけprivateにして外部からgetだけできるようにする
     private(set) var states: [State]
-    
+
     init(hitPoint: HitPoint, states: [State]) {
         self.hitPoint = hitPoint
         self.states = states
     }
-    
+
     func damege(damegeAmount: Int) {
         hitPoint.damege(damegeAmount: damegeAmount)
         if hitPoint.isMin {
@@ -75,4 +74,3 @@ member.hitPoint.amount = -20
 member.states.append(.alive)
 print(member.hitPoint.amount)
 print(member.states)
-
