@@ -25,7 +25,7 @@ class OrderManager {
   //
   // staticなパラメータやメソッドはインスタンスと関連付かない
   // すなわちデータと一切関わりがないということなのでその時点で低凝集の証となる
-  static int add(int moneyAmount1, int moneyAmount2) {
+  static int add(final int moneyAmount1, final int moneyAmount2) {
     return moneyAmount1 + moneyAmount2;
   }
 }

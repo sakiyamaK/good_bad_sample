@@ -26,7 +26,7 @@ class PaymentManager {
   // 外部から受け取った数値(moneyAmount1)と外部から受け取った数値(moneyAmount2)だけで完結しているメソッドで
   // インスタンスのパラメータを一切使っていないからstaticと変わらない
   // moneyAmount1, moneyAmount2を与えてくれたクラス側のかけ離れているので底凝集
-  int add(int moneyAmount1, int moneyAmount2) {
+  int add(final int moneyAmount1, final int moneyAmount2) {
     return moneyAmount1 + moneyAmount2;
   }
 }
