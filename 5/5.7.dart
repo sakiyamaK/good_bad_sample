@@ -13,13 +13,19 @@ class GiftPoint {
   // ---------------
   // [GOOD]
   // インスタンスを生成するためのfactory method
+  // Dartだと専用の文法のfactory constructorとnamed constructorを組み合わせられる
   // どんな目的のインスタンスを生成するか名前ですぐ分かる
   // このふたつ以外にインスタンスを生成するパターンがないことも明確
-  static GiftPoint forStandardMembership() {
+  factory GiftPoint.forStandardMembership() {
     return GiftPoint._(_standardMembershipPoint);
   }
+  // [おまけ]
+  // こう書くのと同じ？
+  // static forStandardMembership() {
+  //   return GiftPoint._(_standardMembershipPoint);
+  // }
 
-  static GiftPoint forPremiumMembership() {
+  factory GiftPoint.forPremiumMembership() {
     return GiftPoint._(_premiumMembershipPoint);
   }
   // --------------------------
