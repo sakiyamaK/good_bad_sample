@@ -20,7 +20,7 @@ class MagicPoint {
     }
     
     // [GOOD]
-    // 5.23.dartで複数あったパラメータの数がひとつになった
+    // 5.23.swiftで複数あったパラメータの数がひとつになった
     func recover(recoverAmount: Int) {
         currentAmount = min(currentAmount + recoverAmount, maxAmount)
     }
