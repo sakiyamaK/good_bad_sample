@@ -26,7 +26,11 @@ class MagicPoint {
     }
 }
 
-let magicPoint = MagicPoint(currentAmount: 100, originalMaxAmount: 100, maxIncrements: [100, 20, 30, 40])
+let magicPoint = MagicPoint(
+  currentAmount: 100, 
+  originalMaxAmount: 100, 
+  maxIncrements: [100, 20, 30, 40]
+)
 print(magicPoint.current)
 magicPoint.recover(recoverAmount: 1000000);
 print(magicPoint.current)

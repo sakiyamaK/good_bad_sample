@@ -21,7 +21,7 @@ class GiftPoint {
   }
   // [おまけ]
   // こう書くのと同じ？
-  // static forStandardMembership() {
+  // static forStandardMembership1() {
   //   return GiftPoint._(_standardMembershipPoint);
   // }
 

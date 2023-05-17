@@ -14,15 +14,15 @@ int recoverMagicPoint(
   // 配列操作関数でできることは配列操作関数でやろう
   // forの中身のロジックを追う必要がある
   // 自由に記述できるためバグが入りやすい
-  int currentMaxMagicPoint = originalMaxMagicPoint;
-  for (int maxMagicPointIncrement in maxMagicPointIncrements) {
-    currentMaxMagicPoint += maxMagicPointIncrement;
-  }
+  // int currentMaxMagicPoint = originalMaxMagicPoint;
+  // for (int maxMagicPointIncrement in maxMagicPointIncrements) {
+  //   currentMaxMagicPoint += maxMagicPointIncrement;
+  // }
 
   // [おまけの続き]
   // 配列操作関数のreduceだと他のパラメータが入り込むことがない
   // reduceのことを知っていれば一目瞭然でロジックを追う必要がない
-  // int currentMaxMagicPoint = originalMaxMagicPoint + maxMagicPointIncrements.reduce((a, b) => a + b);
+  int currentMaxMagicPoint = originalMaxMagicPoint + maxMagicPointIncrements.reduce((a, b) => a + b);
 
   return min(currentMagicPoint + recoveryAmount, currentMaxMagicPoint);
 }

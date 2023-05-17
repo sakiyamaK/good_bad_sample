@@ -2,7 +2,7 @@
 
 class RegularPrice {
   late final int amount;
-  RegularPrice(int amount) {
+  RegularPrice(final int amount) {
     // [GOOD]
     // 通常価格のバリーでションがここに凝集されることになる
     if (amount < 0) {
@@ -14,7 +14,7 @@ class RegularPrice {
 
 class DiscountRate {
   late final double amount;
-  DiscountRate(double amount) {
+  DiscountRate(final double amount) {
     // [GOOD]
     // 割引率のバリーでションがここに凝集されることになる
     if (amount < 0) {
