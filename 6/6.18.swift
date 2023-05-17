@@ -14,15 +14,6 @@ struct Member {
 enum MagicType {
     case fire, shiden
     
-    var name: String {
-        switch self {
-        case .fire:
-            return "ファイア"
-        case .shiden:
-            return "紫電"
-        }
-    }
-    
     // [GOOD]
     // caseの追加漏れがあるとビルドエラーとなるためswitchが乱立してもいい
     // むしろ書籍のように書くとパラメータの追加忘れが起きて危険
@@ -41,6 +32,15 @@ enum MagicType {
       ... <-- costMagicPointの更新抜けちゃった
       ...
      */
+    var name: String {
+        switch self {
+        case .fire:
+            return "ファイア"
+        case .shiden:
+            return "紫電"
+        }
+    }
+    
     func costMagicPoint(member: Member) -> Int {
         switch self {
         case .fire:
