@@ -75,4 +75,7 @@ enum MagicType {
 let member = Member(level: 10, agility: 10, tecnicalPoint: 10)
 // [GOOD]
 // 「炎」魔法に関連付いてattackPowerが呼び出されている
+// [コメント]
+// ただ自分としては「メンバーが炎魔法を呼び出す」というイメージだから
+// member.attackPower(magicType: .fire) と呼び出すように実装するなあ
 MagicType.fire.attackPower(member: member)

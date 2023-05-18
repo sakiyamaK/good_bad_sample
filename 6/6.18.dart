@@ -77,5 +77,8 @@ void main() {
 
   // [GOOD]
   // 「炎」魔法に関連付いてattackPowerが呼び出されている
+  // [コメント]
+  // ただ自分としては「メンバーが炎魔法を呼び出す」というイメージだから
+  // member.attackPower(MagicType.fire) と呼び出すように実装するなあ
   print(MagicType.fire.attackPower(member));
 }
