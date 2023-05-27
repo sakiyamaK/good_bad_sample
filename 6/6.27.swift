@@ -55,7 +55,6 @@ struct HellFire: Magic {
   }
 }
 
-// [コメント]
 // swiftならenumがcomputed parameterやfunctionが導入できるのでswitchでやるべきとは思うけど
 // 「switch使わなくてもできるよ」ということを示す例なので本の通りに書く
 
@@ -65,7 +64,6 @@ let magics: [MagicType: Magic] = [
   .hellFire: HellFire()
 ]
 
-// [コメント]
 // 別にextensionで分ける意味もなかったが本の流れと合わせるためにここで定義しただけ
 // 本だとfunctionが何にも属していないダメな設計
 extension Member {
@@ -101,7 +99,6 @@ extension Member {
       self.damage(magic: magic)
   }
 
-  // [コメント]
   // [おまけ]
   // ただぶっちゃけ今回の例なら直接Magicを引数で渡した方がいいw
   func attack(magic: Magic) {

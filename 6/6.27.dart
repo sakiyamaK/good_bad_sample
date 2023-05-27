@@ -76,7 +76,6 @@ class HellFire implements Magic {
   }
 }
 
-// [コメント]
 // dartならenumのextensionでcomputed parameterやfunctionが導入できるのでswitchでやるべきとは思うけど
 // 「switch使わなくてもできるよ」ということを示す例なので本の通りに書く
 final magics = {
@@ -85,7 +84,6 @@ final magics = {
   MagicType.hellFire: HellFire(),
 };
 
-// [コメント]
 // 別にextensionで分ける意味もなかったが本の流れと合わせるためにここで定義しただけ
 // 本だとfunctionが何にも属していないダメな設計
 extension MemberExtension on Member {

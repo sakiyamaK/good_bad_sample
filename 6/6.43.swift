@@ -1,4 +1,3 @@
-// [コメント]
 // ポリシーパターンというらしい
 // ぶっちゃけこんな複雑なパターンで書いたことがない
 
@@ -40,12 +39,10 @@ class ReturnRateRule: ExcellentCustomerRule {
     }
 }
 
-// [コメント]
 // 書籍だとclassだがExcellentCustomerPolicyを
 // 独立したインスタンスとすることはないはずなのでprotocolにした
 // このprotocolの準拠先でルールの配列はデフォルトで決まるためaddメソッドもいらない
 protocol ExcellentCustomerPolicy {
-    // [コメント]
     // 書籍だとSetを使っているが配列でいいでしょ
     static var rules: [ExcellentCustomerRule] { get }
     static func complyWithAll(purchaseHistory: PurchaseHistory) -> Bool
@@ -62,7 +59,6 @@ extension ExcellentCustomerPolicy {
     }
 }
 
-// [コメント]
 // 書籍だとパラメータでvar policy: ExcellentCustomerPolicyと持っているが好みの問題かも
 // そのままExcellentCustomerPolicyを準拠させるなら
 // 他にパラメータもないしGoldCustomerPolicyはenumで定義もできる
@@ -93,7 +89,6 @@ let isGoldCustomer = GoldCustomerPolicy.complyWithAll(purchaseHistory: purchaseH
 let isSilverCustomer = SilverCustomerPolicy.complyWithAll(purchaseHistory: purchaseHistory)
 
 
-// [コメント]
 // ぶっちゃけひとつずつの条件分岐のためにprotocolやらclassやら用意しないといけないので
 // 余計ややこしい感じがする
 // とはいえifやswitchで条件分岐しなくても目的を果たせるやり方があると認識はしておこう

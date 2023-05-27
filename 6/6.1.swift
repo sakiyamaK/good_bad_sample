@@ -48,8 +48,7 @@ struct Member {
                         chant(magic: magic)
                     }
                 }
-            }
-            
+            }            
         }
     }
     
