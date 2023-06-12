@@ -1,3 +1,6 @@
+import 'dart:math';
+
+
 // [GOOD]
 // アブストラクトクラスで変数やメソッドを定義すれば
 // それに準拠したクラスではそれらを必ず実装しなければならない「約束事」となる
@@ -24,7 +27,7 @@ class Circle extends Shape {
 
   // CircleはShapeの約束事であるareaを実装しないといけない
   @override
-  double get area => radius * radius * 3.14159265359;
+  double get area => radius * radius * pi;
 }
 
 void main() {
