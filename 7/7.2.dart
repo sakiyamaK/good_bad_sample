@@ -22,7 +22,7 @@ bool checkPrisonKey(List<Item> items) {
 }
 
 void main() {
-  var items = <Item>[Yakuso(), PrisonKey(), Yakuso()];
+  final items = <Item>[Yakuso(), PrisonKey(), Yakuso()];
 
   print("checkPrisonKey: ${checkPrisonKey(items)}");
   // ぶっちゃけこれぐらいなら関数にする必要もないかも

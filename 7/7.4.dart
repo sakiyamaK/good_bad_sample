@@ -19,7 +19,7 @@ class Member {
 }
 
 void main() {
-  var members = [
+  final members = [
     Member(name: "田中", hitPoint: 100), 
     Member(name: "山田", hitPoint: 100)
   ];

@@ -48,7 +48,7 @@ bool checkPrisonKey3(List<Item> items) {
 }
 
 void main() {
-  var items = <Item>[Yakuso(), PrisonKey(), Yakuso()];
+  final items = <Item>[Yakuso(), PrisonKey(), Yakuso()];
 
   print("checkPrisonKey1: ${checkPrisonKey1(items)}");
   print("checkPrisonKey2: ${checkPrisonKey2(items)}");
