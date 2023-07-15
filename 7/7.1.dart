@@ -38,19 +38,9 @@ bool checkPrisonKey2(List<Item> items) {
   return false;
 }
 
-bool checkPrisonKey3(List<Item> items) {
-  for (var item in items) {
-    if (item.name == "牢屋の鍵") {
-      return true;
-    }
-  }
-  return false;
-}
-
 void main() {
   final items = <Item>[Yakuso(), PrisonKey(), Yakuso()];
 
   print("checkPrisonKey1: ${checkPrisonKey1(items)}");
   print("checkPrisonKey2: ${checkPrisonKey2(items)}");
-  print("checkPrisonKey3: ${checkPrisonKey3(items)}");
 }

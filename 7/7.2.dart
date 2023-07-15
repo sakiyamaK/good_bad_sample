@@ -21,10 +21,14 @@ bool checkPrisonKey(List<Item> items) {
   return items.any((item) => item.name == "牢屋の鍵");
 }
 
+bool checkPrisonKey2(List<Item> items) => 
+  items.any((item) => item.name == "牢屋の鍵");
+
 void main() {
   final items = <Item>[Yakuso(), PrisonKey(), Yakuso()];
 
   print("checkPrisonKey: ${checkPrisonKey(items)}");
+  print("checkPrisonKey2: ${checkPrisonKey2(items)}");
   // ぶっちゃけこれぐらいなら関数にする必要もないかも
-  print("checkPrisonKey: ${items.any((item) => item.name == "牢屋の鍵")}");
+  print("checkPrisonKey3: ${items.any((item) => item.name == "牢屋の鍵")}");
 }

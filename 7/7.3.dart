@@ -29,7 +29,8 @@ void main() {
   // 毒状態ならHPを減らす
   // [BAD]
   // 入れ子のif文
-  for (var member in members) {
+// ifなどの条件分岐が続くとelse忘れや複雑なパターンでテストしきれなくなる
+for (var member in members) {
     if (member.hitPoint > 0) {
       if (member.stateTypes.contains(MemberStateType.poison)) {
         member.hitPoint -= 10;

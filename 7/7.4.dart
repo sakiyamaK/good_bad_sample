@@ -30,7 +30,11 @@ void main() {
   // 入れ子を解消して見やすくした
   // それより下のコードを追う必要をなくした
   for (var member in members) {
-    if (member.hitPoint <= 0 || !member.stateTypes.contains(MemberStateType.poison)) continue;
+    if (
+      member.hitPoint <= 0 || 
+      !member.stateTypes.contains(MemberStateType.poison)
+      )
+      continue;
 
     member.hitPoint -= 10;
 
