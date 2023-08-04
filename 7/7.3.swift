@@ -19,6 +19,7 @@ let members = [Member(name: "田中", hitPoint: 100), Member(name: "山田", hit
 // 毒状態ならHPを減らす
 // [BAD]
 // 入れ子のif文
+// ifなどの条件分岐が続くとelse忘れや複雑なパターンでテストしきれなくなる
 for member in members {
     if 0 < member.hitPoint {
         if member.sateTypes.contains(.poison) {
