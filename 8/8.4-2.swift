@@ -23,8 +23,8 @@ struct Product {
     let id: Int
     let name: String
     let price: Int
-    // DiscountTypeに依存しないようにProtocolを介して疎結合にする
-    // DiscountTypeの仕様がどう変わろうがdiscountPriceという値を返してくれる何かであれば何でもいい
+    // ServiceDiscountTypeに依存しないようにProtocolを介して疎結合にする
+    // 割引きの仕様がどう変わろうがdiscountPriceという値を返してくれる何かであれば何でもいい
     let discountTypes: [DiscountTypeProtocol]
     var enablePrice: Bool {
         id > 0 && !name.isEmpty && price > 0
