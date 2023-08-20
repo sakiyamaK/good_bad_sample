@@ -27,3 +27,9 @@ class SummerDiscount: DiscountBase {
         max(0, price - 400)
     }
 }
+
+let regular = RegularDiscount(price: 1000)
+let summer = SummerDiscount(price: 1000)
+
+print(regular.getDiscountedPrice())  // 700
+print(summer.getDiscountedPrice())   // 600

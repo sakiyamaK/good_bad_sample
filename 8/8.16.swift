@@ -1,6 +1,5 @@
 protocol DiscountBase {
     var price: Int { get }
-    // 準拠先で違いのある割引金額をパラメータとして用意した
     var discountCharge: Int { get }
     func getDiscountedPrice() -> Int
 }
@@ -31,7 +30,14 @@ class SummerDiscount: DiscountBase {
         self.price = price
     }
     
+    // 仕様変更のために追加された計算
     func getDiscountedPrice() -> Int {
         Int(Double(price) * 0.95)
     }
 }
+
+let regular = RegularDiscount(price: 1000)
+let summer = SummerDiscount(price: 1000)
+
+print(regular.getDiscountedPrice())  // 700
+print(summer.getDiscountedPrice())   // 950
