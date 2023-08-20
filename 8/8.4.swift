@@ -14,7 +14,7 @@ import Foundation
 
 // 割引きする種類をenumで管理
 // 割引きに関する処理がここに集約される
-// 「割引き」を「単一」と捉えた
+//「割引き」を「単一」と捉えた
 //「割引き」に関すること以外は書かない
 enum ServiceDiscountType {
     case normal, summer
@@ -34,7 +34,7 @@ enum ServiceDiscountType {
 }
 
 // ひとつの製品に関する情報
-// 「ひとつの製品」を「単一」と捉えた
+//「ひとつの製品」を「単一」と捉えた
 //「ひとつの製品」に関すること以外は書かない
 struct Product {
     let id: Int
@@ -62,7 +62,7 @@ struct Product {
 }
 
 // 複数の製品に関する情報
-// 「複数の製品」を「単一」と捉えた
+//「複数の製品」を「単一」と捉えた
 //「複数の製品」に関すること以外は書かない
 extension [Product] {
     // 割引きを考慮した総額

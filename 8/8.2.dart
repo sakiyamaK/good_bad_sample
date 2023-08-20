@@ -19,7 +19,7 @@ class ProductDiscount {
 }
 
 // [BAD]
-// 7.8.swiftと同じくそもそもDiscountManagerという[Poduct]を管理するクラスが別にあることがよくない
+// 7.8.dartと同じくそもそもDiscountManagerという[Poduct]を管理するクラスが別にあることがよくない
 class DiscountManager {
   List<Product> discountProducts = [];
   int totalPrice = 0;
