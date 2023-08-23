@@ -6,7 +6,6 @@ protocol PriceAmountProtocol {
     var amount: Int { get }
 }
 
-
 struct SellingPrice: PriceAmountProtocol {
     let amount: Int
 
