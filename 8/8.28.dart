@@ -20,7 +20,7 @@ class SellingPrice {
   int get deliveryCharge => amount > _DELIVERY_FREE_MIN ? 0 : 500;
   
   // [BAD]
-  // これは販売価格と明らかに別概念で蜜結合
+  // これは販売価格と明らかに別概念で密結合
   // 獲得ポイントを計算
   int get shoppingPoint => (amount * _SHOPPING_POINT_RATE).toInt();
 }

@@ -25,7 +25,7 @@ struct SellingPrice {
     }
     
     // [BAD]
-    // これは販売価格と明らかに別概念で蜜結合
+    // これは販売価格と明らかに別概念で密結合
     // 獲得ポイントを計算
     var shoppingPoint: Int {
         Int(Double(amount) * SHOPPING_POINT_RATE)

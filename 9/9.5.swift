@@ -43,6 +43,9 @@ func tapFollowButton() {
   print(userName)
 }
 
+tapUserName();
+tapFollowButton();
+
 /*
 グローバル変数は影響範囲を最小限にするという設計の真逆
 
