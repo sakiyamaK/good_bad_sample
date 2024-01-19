@@ -1,7 +1,7 @@
 import Foundation
 
 enum ThemeMode {
-    case a, b
+    case normal, dark
 }
 
 // ECサイトのユーザモデル
