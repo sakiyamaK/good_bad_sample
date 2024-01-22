@@ -15,7 +15,7 @@ Userモデルの目的
 ・自身が自分の情報を知る
 ・そのユーザに商品を配送する
 ・画面の表示モード
-・事業者でああるかどうか
+・事業者であるかどうか
 */
 
 // ログインした時に得られるユーザ情報
@@ -50,7 +50,7 @@ struct UserForOthers {
 目的
 自身の個人情報が正しいか一覧で確認する
 */
-struct UserForOthers {
+struct UserForMe {
   let id: Int
   let name: String
   let email: String

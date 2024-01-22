@@ -44,7 +44,7 @@ final class CorporationManager {
 
   private(set) var loginedUser: User?
 
-  func createUser(name: String, email: String, password: String) throws -> Void {
+  func createUser(name: String, email: String, password: String, corporationNumber: String) throws -> Void {
       // 本来はサーバーと通信してユーザ作成
 //      loginedUser = User(id: 1, name: name, email: email, passwordDigest: password)
   }
